@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enter Starting Period</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+  <h1>Set Starting Period</h1>
+  <form method="POST">
+    <input type="number" name="start_period" placeholder="Enter starting period" required>
+    <button type="submit" class="btn success">Start</button>
+  </form>
+</div>
+</body>
+</html>

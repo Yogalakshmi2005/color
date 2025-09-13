@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dataset Creator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+  <h1>Dataset Creator</h1>
+
+  <form method="POST">
+    <div class="buttons">
+      {% for n in range(10) %}
+      <button type="submit" name="number" value="{{ n }}" class="btn num-btn">{{ n }}</button>
+      {% endfor %}
+    </div>
+  </form>
+
+  <div class="buttons">
+    <a href="{{ url_for('download', filetype='csv') }}" class="btn success">Download CSV</a>
+    <a href="{{ url_for('download', filetype='xlsx') }}" class="btn danger">Download Excel</a>
+    <form method="POST" action="{{ url_for('reset') }}" style="display:inline;">
+      <button type="submit" class="btn">Reset</button>
+    </form>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Period</th>
+        <th>Number</th>
+        <th>Color</th>
+        <th>Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in dataset %}
+      <tr>
+        <td>{{ row.Period }}</td>
+        <td>{{ row.Number }}</td>
+        <td class="{{ row.Color|lower }}">{{ row.Color }}</td>
+        <td class="{% if row.Category == 'Volit' %}volit-cat{% else %}{{ row.Category|lower }}{% endif %}">
+          {{ row.Category }}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

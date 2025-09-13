@@ -1,0 +1,91 @@
+/* General page style */
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+/* Headings */
+h1 {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Input box */
+input[type="number"], input[type="text"] {
+    padding: 10px;
+    width: 250px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin: 6px;
+    padding: 10px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.success { background: #28a745; color: white; }
+.danger  { background: #dc3545; color: white; }
+.num-btn { background: #007bff; color: white; width: 50px; }
+
+/* Buttons wrapper */
+.buttons {
+    margin: 20px 0;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #6c757d;
+    color: white;
+}
+
+/* Colors */
+.red { color: red; font-weight: bold; }
+.green { color: green; font-weight: bold; }
+.blue { color: blue; font-weight: bold; }
+.volit { color: orange; font-weight: bold; }
+
+/* Category styling */
+.small { color: #17a2b8; font-weight: bold; }
+.big { color: #6f42c1; font-weight: bold; }
+.volit-cat { color: orange; font-weight: bold; }
